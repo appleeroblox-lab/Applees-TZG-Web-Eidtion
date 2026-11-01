@@ -1,8 +1,21 @@
 {
-  "currentVersion": "v0.0.144",
+  "currentVersion": "v0.0.145",
   "legacyMapping": "Legacy source N is displayed as v0.0.N.",
   "historyNote": "The earliest separately documented release is v0.0.3. Original creation notes and separate entries for v0.0.1–v0.0.2, v0.0.9–v0.0.13 and v0.0.18–v0.0.22 are not recoverable from this repository. The first Git import on 25 October 2026 already contained earlier development. Historical features may be replaced by later updates.",
   "entries": [
+    {
+      "legacyVersion": 145,
+      "version": "v0.0.145",
+      "date": "2026-11-01",
+      "title": "Map clarity and consistent game UI",
+      "changes": [
+        "Improved distant sphere detail, widened orbital spacing and added distinct visible moon orbits.",
+        "Added irregular asteroid models, black-hole accretion disks and 3D galaxy/nebula details, with a Milky Way skybox.",
+        "Removed the map compass and reduced selected-body information to its name and destination/route buttons. Search focus no longer opens the body list.",
+        "Unified interface colors with the main cyan/white HUD, squared icon-only controls and bundled the original Fredoka One font."
+      ],
+      "source": "GitHub repository update"
+    },
     {
       "legacyVersion": 144,
       "version": "v0.0.144",

@@ -1,0 +1,19 @@
+@font-face{font-family:'Fredoka One';src:url('./fonts/FredokaOne-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Fredoka;src:url('./fonts/FredokaOne-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Fredoka;src:url('./fonts/FredokaOne-Regular.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:Fredoka;src:url('./fonts/FredokaOne-Regular.ttf') format('truetype');font-weight:600 900;font-display:swap}
+body.referenceHUD,body.referenceHUD *{font-family:'Fredoka One','Noto Sans Myanmar',sans-serif!important;font-synthesis:none}
+body.referenceHUD{--ui-panel:linear-gradient(140deg,#6fcaffd9,#1375b6e8);--ui-control:linear-gradient(140deg,#6fcaff80,#1375b69c);--ui-border:2px solid #e4f7ff;--ui-text:#f4fcff;--glass:var(--ui-control);--rim:var(--ui-border)}
+body.referenceHUD :is(dialog,[role=dialog],.glass,.journeyCard,.journeyDialog,#friendsPanel,#chatPanel,#debugWindow){color:var(--ui-text)!important;background:var(--ui-panel)!important;border-color:#e4f7ff!important;border-radius:12px}
+body.referenceHUD :is(button,input,select,textarea,.gameSelectTrigger){color:var(--ui-text)!important;border-color:#e4f7ff!important}
+body.referenceHUD :is(button,.gameSelectTrigger){background:var(--ui-control)!important;border-width:2px;border-radius:8px;box-shadow:0 2px 0 #114b7466}
+body.referenceHUD :is(input,select,textarea){background:#176b9dc7!important}
+body.referenceHUD button[aria-pressed=true],body.referenceHUD button.active{background:#249ed8e8!important;border-color:#a8edff!important}
+body.referenceHUD button[data-icon-only]{box-sizing:border-box!important;aspect-ratio:1!important;width:38px!important;height:38px!important;min-width:38px!important;min-height:38px!important;max-width:38px!important;max-height:38px!important;padding:6px!important;display:inline-grid;place-items:center}
+body.referenceHUD button[data-icon-only] :is(img,svg){max-width:100%;max-height:100%}
+body.referenceHUD #mapDialog{background:#020711!important;border:0!important;border-radius:0!important}
+body.referenceHUD #mapDialog #selection,body.referenceHUD #mapDialog #catalog{background:var(--ui-panel)!important;border:var(--ui-border)!important}
+body.referenceHUD #mapDialog :is(#search,#systemFilter,.gameSelectTrigger,#atlasToolbar button,.mapSelectedActions button){background:var(--ui-control)!important;border:var(--ui-border)!important;box-shadow:0 2px 0 #114b7466}
+body.referenceHUD #mapDialog #atlasToolbar button[data-icon-only]{width:40px!important;height:40px!important;min-width:40px!important;min-height:40px!important;max-width:40px!important;max-height:40px!important}
+body.referenceHUD :is(input,textarea)::placeholder{color:#e4f7ff;opacity:.75}
+body.referenceHUD :is(.settingsSection,.gameSelectionDialog,.emojiPicker,#utilityMenu,#toast,#chatPlayerProfile,#dailyRewards,#planetMapMenu){color:var(--ui-text)!important;background:var(--ui-panel)!important;border-color:#e4f7ff!important}
