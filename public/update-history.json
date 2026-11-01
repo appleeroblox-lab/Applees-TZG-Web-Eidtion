@@ -1,8 +1,21 @@
 {
-  "currentVersion": "v0.0.141",
+  "currentVersion": "v0.0.142",
   "legacyMapping": "Legacy source N is displayed as v0.0.N.",
   "historyNote": "The earliest separately documented release is v0.0.3. Original creation notes and separate entries for v0.0.1–v0.0.2, v0.0.9–v0.0.13 and v0.0.18–v0.0.22 are not recoverable from this repository. The first Git import on 25 October 2026 already contained earlier development. Historical features may be replaced by later updates.",
   "entries": [
+    {
+      "legacyVersion": 142,
+      "version": "v0.0.142",
+      "date": "2026-11-01",
+      "title": "Cinematic flybys, space speed and atmosphere flares",
+      "changes": [
+        "Camera button cycles Chase, Cockpit, Orbit and Flyby – Cinematic. Removed Planet Aligned and Space Aligned orbit choices.",
+        "Cinematic shots hold fixed world positions, track the ship center and repeat ahead of its flight path with smooth camera transitions. Ship movement and velocity are preserved.",
+        "Normal space speed is capped at 50c and boosted space speed at 100c. Existing atmospheric caps, acceleration, boost duration and cooldown are unchanged.",
+        "Added smooth orange-red exit flares from 1,800m to 5,000m without nose shine, with speed and airflow response. Smoothed entry flare transitions and disabled camera shake during cinematic shots."
+      ],
+      "source": "GitHub repository update"
+    },
     {
       "legacyVersion": 141,
       "version": "v0.0.141",

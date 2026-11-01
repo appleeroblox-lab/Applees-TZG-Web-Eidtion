@@ -1,5 +1,5 @@
 import * as T from './vendor/three.module.js';
-import {surfaceHeight} from './surface.js?v=131';
+import {surfaceHeight} from './surface.js?v=142';
 import {PAD_RADIUS,CRAFT_LAYOUT,TRADE_LAYOUT,padHeightAt} from './surface-layout.js';
 // Every route meets the same junction; shop approaches end at the entrance.
 const routeCache=new Map();

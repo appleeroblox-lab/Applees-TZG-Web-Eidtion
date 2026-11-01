@@ -1,12 +1,12 @@
 import {baseSite,insideBase} from './planet-base-layout.js?v=100';
-import {settlementSites,settlementBlocks,settlementFromId} from './settlements.js?v=131';
-import {treeFromId,TREE_HP,TREE_REACH} from './tree-data.js?v=131';
+import {settlementSites,settlementBlocks,settlementFromId} from './settlements.js?v=142';
+import {treeFromId,TREE_HP,TREE_REACH} from './tree-data.js?v=142';
 import {warpQuote} from './warp-pricing.js?v=105';
 import {blockBounds,canToggleDoor,doorObstructed} from './door-rules.js';
 import {validMount,inferMount} from './placement-rules.js';
 import {PAD_RADIUS,PAD_SIGN,padHeightAt,buildingFootprint} from './surface-layout.js';
-import {V} from './flight.js?v=131';
-import {surfaceHeight} from './surface.js?v=131';
+import {V} from './flight.js?v=142';
+import {surfaceHeight} from './surface.js?v=142';
 const definitions=[
 ['quartz','Quartz','#d9f2ff',60,55],['iron','Iron Ore','#9b6e58',100,70],['copper','Copper Ore','#dd9563',80,65],['bauxite','Bauxite','#c57b4f',100,80],['gold','Gold','#edc66b',180,180],['mica','Mica','#bc9fc2',60,50],['feldspar','Feldspar','#d4ad9c',80,60],['graphite','Graphite','#4d596a',100,85],
 ['ilmenite','Ilmenite','#747a97',140,110],['anorthite','Anorthite','#d1d0c0',100,90],['basalt','Basalt','#727584',120,80],['silica','Silica','#b4d8e0',60,65],['helium','Helium-3 Mineral','#94e0e1',200,220],['hematite','Hematite','#b34f43',140,110],['olivine','Olivine','#93ae58',100,100],['gypsum','Gypsum','#e7d4b7',60,65],['perchlorate','Perchlorate','#d5b9a5',80,85],['sulfur','Sulfur','#dfcf55',80,90],['pyrite','Pyrite','#c3ab61',140,130],['corundum','Corundum','#d7809d',180,170],['titanium','Titanium Ore','#9bafc4',180,160],['obsidian','Obsidian','#504d72',160,140],['ice','Water Ice','#a9e0f3',60,60],['methane','Methane Ice','#9bc8c1',80,90],['ammonia','Ammonia Ice','#d8c9df',80,95],['salt','Salt Crystals','#e4e2df',60,55],['cobalt','Cobalt Ore','#6587d0',140,145],['nickel','Nickel Ore','#9aa38c',120,115],['platinum','Platinum','#c7d2dc',220,250],['diamond','Diamond','#b8f8ff',280,380],['ruby','Ruby','#e56d8f',220,260],['emerald','Emerald','#5dd49c',220,270],['sapphire','Sapphire','#6da6ed',220,275],['lithium','Lithium Ore','#c6acda',120,135],['chromite','Chromite','#8c819a',160,155],['magnetite','Magnetite','#4b6380',140,125],['opal','Opal','#a6e8d1',160,190],['garnet','Garnet','#9c485f',180,185],['zircon','Zircon','#dfa275',200,210],['tungsten','Tungsten','#8f9aa9',240,240],

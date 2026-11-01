@@ -1,6 +1,6 @@
-import {atmosphereSpeedCap,atmosphereAltitude} from './atmospheric-flight.js?v=130';
+import {atmosphereSpeedCap,atmosphereAltitude} from './atmospheric-flight.js?v=142';
 import * as T from './vendor/three.module.js';
-export const C_UNITS=299792.458/100,DEFAULT_MAX_C=100,BOOST_MAX_C=200,BOOST_MULTIPLIER=1.5;
+export const C_UNITS=299792.458/100,DEFAULT_MAX_C=50,BOOST_MAX_C=100,BOOST_MULTIPLIER=1.5;
 export const SURFACE_MIN_SPEED=5;
 export function minimumSpeed(f,surface=false){return surface&&['flying','gas','ascent'].includes(f.surface?.phase)?SURFACE_MIN_SPEED:0}
 export function speedLimit(f,surface=false,boost=false){return surface?atmosphereSpeedCap(f.surface?.body,atmosphereAltitude(f.surface)):C_UNITS*(boost?BOOST_MAX_C:Math.min(f.maxSpeedC||DEFAULT_MAX_C,DEFAULT_MAX_C))}

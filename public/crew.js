@@ -1,10 +1,10 @@
 import {blockBounds} from './door-rules.js';
 import * as T from './vendor/three.module.js';
-import {V} from './flight.js?v=131';
-import {surfaceHeight,surfaceGravity} from './surface.js?v=131';
+import {V} from './flight.js?v=142';
+import {surfaceHeight,surfaceGravity} from './surface.js?v=142';
 import {padHeightAt,isSolidBlock,CRAFT_LAYOUT} from './surface-layout.js';
 export function jumpSpeed(body){return 5.6*Math.max(.65,Math.min(1.1,(surfaceGravity(body)/9.81)**.18))}
-import {TRADER} from './economy.js?v=131';
+import {TRADER} from './economy.js?v=142';
 export class Crew {
  constructor(surface){this.surface=surface;surface.crew=this;this.pos=V();this.eyeHeight=1.68;this.reset()}
  reset(){this.onFoot=false;this.yaw=0;this.pitch=-.12;this.velocityY=0;this.walkTime=0;this.moving=false;this.jumpHeld=false;this.climbing=false}

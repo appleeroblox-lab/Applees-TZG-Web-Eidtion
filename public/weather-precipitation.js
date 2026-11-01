@@ -1,13 +1,13 @@
-import {WorldPrecipitation,precipitationSegment,WEATHER_CELL,WEATHER_LAYER,weatherGroundHeight,wrapWeather} from './world-precipitation.js?v=131';
+import {WorldPrecipitation,precipitationSegment,WEATHER_CELL,WEATHER_LAYER,weatherGroundHeight,wrapWeather} from './world-precipitation.js?v=142';
 import {earthBiome,biomeWeather} from './earth-biomes.js?v=122';
 import {ShipWeatherMask} from './ship-weather-mask.js';
 import * as T from './vendor/three.module.js';
-import {surfaceHeight} from './surface.js?v=131';
+import {surfaceHeight} from './surface.js?v=142';
 import {padHeightAt} from './surface-layout.js';
 import {weatherOccluders,rainRoof,rainOccluded} from './rain-shelter.js?v=100';
-import {weatherPolicy,precipitationCeiling,underWeatherClouds} from './weather-state.js?v=119';
+import {weatherPolicy,precipitationCeiling,underWeatherClouds} from './weather-state.js?v=142';
 const EMPTY=[];
-export {precipitationSegment,weatherGroundHeight} from './world-precipitation.js?v=131';
+export {precipitationSegment,weatherGroundHeight} from './world-precipitation.js?v=142';
 export class WeatherShelterCache{
  constructor(size=32){this.size=size;this.cells=new Map();this.result=[];this.seen=new Set();this.count=0}
  key(x,z){const a=Math.floor(x/2)-this.ox,b=Math.floor(z/2)-this.oz;return a<0||a>=this.size||b<0||b>=this.size?-1:a+b*this.size}

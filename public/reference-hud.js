@@ -1,6 +1,6 @@
-import {canLandHere} from './atmospheric-flight.js?v=128';
-import {C_UNITS,DEFAULT_MAX_C,BOOST_MAX_C} from './speed-control.js?v=128';
-import {formatSpeed} from './explorer.js?v=131';
+import {canLandHere} from './atmospheric-flight.js?v=142';
+import {C_UNITS,DEFAULT_MAX_C,BOOST_MAX_C} from './speed-control.js?v=142';
+import {formatSpeed} from './explorer.js?v=142';
 export function updateReferenceHUD({surface,crew,flight,boostSelected,explorer,shipBoost}){
  const $=id=>document.getElementById(id),active=surface.active,foot=crew.onFoot,free=!!explorer?.enabled,flying=!free&&!foot&&(!active||surface.launched),parked=active&&surface.phase==='parked';
  document.body.classList.toggle('shipFlying',flying);document.body.classList.toggle('onPad',parked&&!foot);document.body.classList.toggle('launching',surface.phase==='countdown');

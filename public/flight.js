@@ -1,7 +1,7 @@
 import {destinationLightYears} from './warp-pricing.js?v=105';
-import {atmosphereBoundary} from './atmospheric-flight.js?v=130';
+import {atmosphereBoundary} from './atmospheric-flight.js?v=142';
 import {rotateShip} from './ship-rotation.js';
-import {holdVelocity} from './speed-control.js?v=130';
+import {holdVelocity} from './speed-control.js?v=142';
 import * as T from './vendor/three.module.js';
 export const V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z);
 export const clearance=1.65;
