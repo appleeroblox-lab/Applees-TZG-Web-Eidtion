@@ -1,5 +1,5 @@
 import {starVisualRadius} from './star-size.js?v=140';
-import {ShipCameraModes,SHIP_CAMERA_MODES,SHIP_CAMERA_NAMES} from './ship-camera-modes.js?v=140';
+import {ShipCameraModes,SHIP_CAMERA_MODES,SHIP_CAMERA_NAMES} from './ship-camera-modes.js?v=141';
 import {installSettingsAppearance} from './settings-appearance.js?v=140';
 import {WarpTunnel,warpWhiteFade} from './warp-effects.js?v=132';
 import {SurfaceMinimap} from './minimap.js?v=131';
