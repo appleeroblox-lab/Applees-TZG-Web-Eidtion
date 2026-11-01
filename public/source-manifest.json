@@ -1,5 +1,5 @@
 {
-  "version": 140,
+  "version": 141,
   "files": [
     "account-gate.js",
     "account-pages.js",
@@ -713,7 +713,7 @@
     "flight.js": 131,
     "forestry.js": 131,
     "friends-ui.js": 103,
-    "game.js": 140,
+    "game.js": 141,
     "gif-gallery.js": 96,
     "ground-weather.js": 131,
     "identity-ui.js": 91,
@@ -765,7 +765,7 @@
     "world-precipitation.js": 131,
     "models/crafting-center-v96.json": 97,
     "account-gate.js": 107,
-    "boot-loader.js": 140,
+    "boot-loader.js": 141,
     "polish-v96.css": 100,
     "roblox-assets.js": 97,
     "models/base-venus.json": 100,
@@ -829,7 +829,7 @@
     "vendor/html2canvas.min.js": 102,
     "update-logs.js": 138,
     "legacy-ui.js": 102,
-    "update-history.json": 140,
+    "update-history.json": 141,
     "update-logs.css": 103,
     "mobile-notifications.js": 103,
     "free-camera.js": 105,
@@ -868,7 +868,7 @@
     "surface-palette.js": 119,
     "minimap.js": 131,
     "minimap.css": 127,
-    "index.html": 140,
+    "index.html": 141,
     "warp-effects.js": 132,
     "reentry-plume.js": 133,
     "textures/star-shine.png": 128,
@@ -876,7 +876,7 @@
     "reference-ui.css": 131,
     "settings-appearance.js": 140,
     "settings-appearance.css": 140,
-    "ship-camera-modes.js": 140,
+    "ship-camera-modes.js": 141,
     "star-size.js": 140,
     "camera-horizon.js": 140
   }

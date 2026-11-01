@@ -1,8 +1,20 @@
 {
-  "currentVersion": "v0.0.140",
+  "currentVersion": "v0.0.141",
   "legacyMapping": "Legacy source N is displayed as v0.0.N.",
   "historyNote": "The earliest separately documented release is v0.0.3. Original creation notes and separate entries for v0.0.1–v0.0.2, v0.0.9–v0.0.13 and v0.0.18–v0.0.22 are not recoverable from this repository. The first Git import on 25 October 2026 already contained earlier development. Historical features may be replaced by later updates.",
   "entries": [
+    {
+      "legacyVersion": 141,
+      "version": "v0.0.141",
+      "date": "2026-11-01",
+      "title": "High-speed ship camera fixes",
+      "changes": [
+        "Camera switches now follow the moving ship instead of pulling the view toward its previous world position.",
+        "Cinematic flyby uses a moving shot when a single frame would carry the ship past the stationary camera, while slower flybys keep stationary shots.",
+        "Flyby replacement shots refresh when the ship outruns their destination."
+      ],
+      "source": "GitHub repository update"
+    },
     {
       "legacyVersion": 140,
       "version": "v0.0.140",

@@ -119,7 +119,19 @@ if(process.argv.includes('--new-camera-modes-only')){
  }}
  choose('space-orbit');const before=state.camQ.clone();state.flight.pos.set(1000,0,0);for(let i=0;i<80;i++)queued();assert(state.camQ.angleTo(before)<1e-5,'space orbit ignores planet orientation');
  for(const mode of ['planet-orbit','space-orbit']){choose(mode);const fire=(type,id,x,y)=>{const e=new dom.Event(type,{bubbles:true,cancelable:true});Object.assign(e,{pointerType:'touch',pointerId:id,button:0,clientX:x,clientY:y});c['on'+type]?.(e);c.dispatchEvent(e)};const old=state.orbitDistance;fire('pointerdown',2302,100,100);fire('pointerdown',2303,200,100);fire('pointermove',2303,250,100);fire('pointerup',2303,250,100);assert(state.orbitDistance<old,'touch pinch zooms added orbit');const oldQ=state.camQ.clone();fire('pointermove',2302,150,130);fire('pointerup',2302,150,130);assert(state.camQ.angleTo(oldQ)>.01,'single finger rotates after pinch')}choose('space-orbit');state.flight.nav={kind:'warp'};choose('flyby');assert.equal($('shipCameraMode').value,'space-orbit','warp locks new camera selector');state.flight.nav=null;
- console.log('PASS all six camera modes on surface/in space, independent orbit rotation/zoom, fixed space orientation and warp selector lock.');process.exit(0)
+ state.surface.body=null;state.crew.reset();state.explorer.enabled=false;state.flight.nav=null;state.flight.pos.set(0,1e7,0);state.flight.q.identity();
+ for(const mode of ['chase','planet-orbit','space-orbit','cockpit','chase','flyby','orbit']){
+  choose(mode);
+  for(let i=0;i<50;i++){
+   state.flight.cruiseSpeed=299792.458;queued();
+   const subject=state.shipRig.subjectCenter.clone().applyMatrix4(state.shipRig.model.matrixWorld);
+   assert(state.camera.position.distanceTo(subject)<400,mode+' view stays near the ship during full-speed rendering');
+   assert(state.camera.quaternion.toArray().every(Number.isFinite));
+   if(i>30&&mode!=='flyby')assert(state.camera.position.distanceTo(subject)<125,mode+' settles at the normal camera distance');
+  }
+ }
+ state.flight.cruiseSpeed=0;state.flight.vel.set(0,0,0);
+ console.log('PASS all six camera modes on surface/in space, independent orbit rotation/zoom, fixed space orientation, warp selector lock and full-speed camera switches.');process.exit(0)
 }
 if(process.argv.includes('--subject-camera-only')){
  state.surface.enter(state.flight.bodies.find(b=>b.name==='Earth'),true);queued();$('cameraBtn').onclick();$('cameraBtn').onclick();assert(state.stableCamera);const center=()=>{state.shipRig.model.updateWorldMatrix(true,false);const subject=state.shipRig.subjectCenter.clone().applyMatrix4(state.shipRig.model.matrixWorld),p=subject.project(state.camera);assert(Math.abs(p.x)<1e-6&&Math.abs(p.y)<1e-6,'ship stays centered')};queued();center();
