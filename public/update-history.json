@@ -1,8 +1,19 @@
 {
-  "currentVersion": "v0.0.142",
+  "currentVersion": "v0.0.143",
   "legacyMapping": "Legacy source N is displayed as v0.0.N.",
   "historyNote": "The earliest separately documented release is v0.0.3. Original creation notes and separate entries for v0.0.1–v0.0.2, v0.0.9–v0.0.13 and v0.0.18–v0.0.22 are not recoverable from this repository. The first Git import on 25 October 2026 already contained earlier development. Historical features may be replaced by later updates.",
   "entries": [
+    {
+      "legacyVersion": 143,
+      "version": "v0.0.143",
+      "date": "2026-11-01",
+      "title": "Cinematic camera distance fix",
+      "changes": [
+        "Bound cinematic camera placement using ship size and speed so shots stay wide without losing the ship.",
+        "Refresh cinematic shots before the ship crosses the maximum distance; keep ship movement and velocity untouched."
+      ],
+      "source": "GitHub repository update"
+    },
     {
       "legacyVersion": 142,
       "version": "v0.0.142",
