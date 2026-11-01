@@ -1,7 +1,7 @@
 import {nearbyPlanetUp,stabilizeCameraHorizon} from './camera-horizon.js';
 import * as T from './vendor/three.module.js';
 import {surfacePadding} from './terrain.js';
-import {V,attitude,clearance} from './flight.js?v=131';
+import {V,attitude,clearance} from './flight.js?v=142';
 export class Explorer {
  constructor(flight){this.flight=flight;this.enabled=true;this.exponent=.4;this.orbit=null;this.pendingOrbit=null;this.fov=60;this.exposure=1.05;this.labels=true;this.paths=false;this.timeScale=1;this.adaptive=true;this.effectiveSpeed=0}
  get speed(){return 10**this.exponent}

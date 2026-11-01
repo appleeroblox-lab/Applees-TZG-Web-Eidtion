@@ -1,5 +1,5 @@
 import {earthBiome,BIOMES} from './earth-biomes.js';
-import {surfaceHeight} from './surface.js?v=131';
+import {surfaceHeight} from './surface.js?v=142';
 const cache=new Map();
 function hash(s){let h=2166136261;for(const c of s)h=Math.imul(h^c.charCodeAt(0),16777619);return h>>>0}
 // Keep existing village identities and saved edits stable across biome artwork changes.

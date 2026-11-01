@@ -1,5 +1,5 @@
 import {GuestAccess} from './guest-access.js?v=108';
-import {PlayerJourney,PlayerRewards} from './player-journey.js?v=131';
+import {PlayerJourney,PlayerRewards} from './player-journey.js?v=142';
 import {PlayerActivity} from './player-activity.js?v=107';
 import {MobileNotifications} from './mobile-notifications.js?v=103';
 import {accountGate} from './account-gate.js?v=107';

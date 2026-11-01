@@ -1,22 +1,22 @@
-import {TerrainClouds} from './terrain-clouds.js?v=131';
+import {TerrainClouds} from './terrain-clouds.js?v=142';
 import {biomeColor} from './earth-biomes.js?v=122';
-import {PlanetTransition} from './planet-transition.js?v=131';
+import {PlanetTransition} from './planet-transition.js?v=142';
 import {installCloudDetail} from './graphics-detail.js?v=110';
 import {TOWER_PARTS} from './launch-tower.js?v=104';
-import {PlanetBases} from './planet-bases.js?v=131';
+import {PlanetBases} from './planet-bases.js?v=142';
 import {addTerrainDetail,terrainMaterial} from './terrain-detail.js?v=122';
 import {NightAurora} from './night-aurora.js?v=136';
-import {createSurfaceRoads} from './surface-roads.js?v=131';
+import {createSurfaceRoads} from './surface-roads.js?v=142';
 import {buildGasInterior,gasCloudPosition} from './gas-interior.js?v=105';
 import {graphicsPolicy} from './graphics-policy.js?v=110';
-import {cloudProfile,applyAtmosphericFog,upperSkyState,setAtmosphereStars} from './atmosphere-effects.js?v=130';
+import {cloudProfile,applyAtmosphericFog,upperSkyState,setAtmosphereStars} from './atmosphere-effects.js?v=142';
 import {PAD_RADIUS,PAD_SIGN} from './surface-layout.js';
 import * as T from './vendor/three.module.js';
 import {glow} from './visuals.js?v=140';
-import {surfaceHeight,atmosphere} from './surface.js?v=131';
+import {surfaceHeight,atmosphere} from './surface.js?v=142';
 import {SurfaceSky} from './surface-sky.js?v=140';
 import {terrainColor} from './surface-palette.js';
-import {EarthEnvironment} from './earth-environment.js?v=131';
+import {EarthEnvironment} from './earth-environment.js?v=142';
 import {applySurfaceLighting} from './lighting.js?v=110';
 export class SurfaceView{
  constructor(session,bodies=[]){this.session=session;this.scene=new T.Scene();this.bases=new PlanetBases(this.scene,session);this.aurora=new NightAurora(this.scene);this.session.aurora=this.aurora;this.scene.userData.surface=session;this.celestial=new SurfaceSky(session,bodies);this.scene.add(this.celestial.group);this.environment=new EarthEnvironment();try{this.environment.restore(JSON.parse(localStorage.getItem('zero-gravity-earth-environment')))}catch{}this.body=null;this.transition=new PlanetTransition(this);this.session.planetView=this.transition;this.cloudTime=0;this.minerals=new T.Group();this.scene.add(this.minerals);this.spaceMap=null;this.fill=new T.HemisphereLight(0xc5dfff,0x3c4030,1.35);this.scene.add(this.fill);this.sun=new T.DirectionalLight(0xffedce,3);this.sun.position.set(-400,700,-300);this.scene.add(this.sun)}

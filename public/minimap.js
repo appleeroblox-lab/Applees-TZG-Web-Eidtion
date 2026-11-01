@@ -1,8 +1,8 @@
 import * as T from './vendor/three.module.js';
 import {earthBiome,biomeCell,BIOME_SPACING} from './earth-biomes.js?v=122';
 import {surfacePalette} from './surface-palette.js?v=119';
-import {settlementSites,settlementBlocks,settlementFromId} from './settlements.js?v=131';
-import {roadRoutes} from './surface-roads.js?v=131';
+import {settlementSites,settlementBlocks,settlementFromId} from './settlements.js?v=142';
+import {roadRoutes} from './surface-roads.js?v=142';
 import {CRAFT_LAYOUT,TRADE_LAYOUT} from './surface-layout.js';
 import {baseSite} from './planet-base-layout.js?v=100';
 const legend=[['village','Village','#ffe08a'],['trade','Trade Center','#ff7378'],['craft','Craft Center','#56caff'],['launch','Launch Pad','#d9efff'],['tower','Tower','#b698ff'],['biome','Biome','#9fef6f']];

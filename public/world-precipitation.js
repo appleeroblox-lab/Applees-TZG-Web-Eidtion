@@ -1,8 +1,8 @@
 import * as T from './vendor/three.module.js';
-import {surfaceHeight} from './surface.js?v=131';
+import {surfaceHeight} from './surface.js?v=142';
 import {padHeightAt} from './surface-layout.js';
 import {rainRoof} from './rain-shelter.js?v=100';
-import {precipitationCeiling} from './weather-state.js?v=119';
+import {precipitationCeiling} from './weather-state.js?v=142';
 export const WEATHER_CELL=32,WEATHER_LAYER=48;
 export const wrapWeather=(x,n)=>(x%n+n)%n;
 const seed=(x,z,i)=>{const n=Math.sin(x*127.1+z*311.7+i*78.233)*43758.5453;return n-Math.floor(n)};

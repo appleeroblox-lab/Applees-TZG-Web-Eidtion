@@ -1,6 +1,6 @@
 import {atmosphereProfile} from './atmosphere-profiles.js?v=119';
 import * as T from './vendor/three.module.js';
-import {hasAtmosphere,PLANET_VIEW_RADIUS} from './atmospheric-flight.js?v=130';
+import {hasAtmosphere,PLANET_VIEW_RADIUS} from './atmospheric-flight.js?v=142';
 const bindings=new WeakMap();
 const smooth=(a,b,x)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t)};
 export function atmosphereFogRange(height,near=45,far=158){const cover=smooth(450,1500,height);return {near:near*(1-cover)+height*.12*cover,far:far*(1-cover)+Math.max(far,height*.72)*cover}}

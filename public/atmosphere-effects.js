@@ -1,7 +1,7 @@
 import {atmosphereProfile} from './atmosphere-profiles.js?v=119';
-import {airColor,atmosphereFogRange} from './spherical-atmosphere.js?v=130';
-import {hasAtmosphere} from './atmospheric-flight.js?v=130';
-import {transitionState} from './atmospheric-flight.js?v=130';
+import {airColor,atmosphereFogRange} from './spherical-atmosphere.js?v=142';
+import {hasAtmosphere} from './atmospheric-flight.js?v=142';
+import {transitionState} from './atmospheric-flight.js?v=142';
 import * as T from './vendor/three.module.js';
 export function cloudProfile(body){const p=atmosphereProfile(body);return p?{...p,color:p.cloud}:null}
 export function cloudPosition(body,index,time){const profile=cloudProfile(body);if(!profile)return new T.Vector3();const wrap=n=>((n+800)%1600+1600)%1600-800;return new T.Vector3(wrap(Math.sin(index*7.71)*790+time*profile.wind),profile.height+Math.sin(index*2.31+time*.018)*22,wrap(Math.cos(index*5.73)*790+time*profile.wind*.23))}

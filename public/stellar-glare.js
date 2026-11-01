@@ -1,6 +1,6 @@
 import {starShineColor,glowRGBA} from './star-colors.js';
 import * as T from './vendor/three.module.js';
-import {surfaceHeight} from './surface.js?v=131';
+import {surfaceHeight} from './surface.js?v=142';
 // Only visible, color-writing surfaces may hide a stellar glow.
 export function glareMaterialBlocks(material,ring=false){return !!material&&material.visible!==false&&material.colorWrite!==false&&(material.opacity??1)>.001&&(ring||material.depthWrite!==false&&(!material.transparent||(material.opacity??1)>=.85))}
 export function glareMeshes(roots){const meshes=[];function walk(o){if(!o||!o.visible)return;const ring=o.geometry?.type==='RingGeometry';if(o.isMesh&&!o.userData.terrain&&!o.userData.reentryShine&&o.userData.skyBody?.body?.type!=='STAR'&&(Array.isArray(o.material)?o.material:[o.material]).some(m=>glareMaterialBlocks(m,ring)))meshes.push(o);for(const child of o.children||[])walk(child)}for(const root of roots){root?.updateWorldMatrix(true,true);walk(root)}return meshes}

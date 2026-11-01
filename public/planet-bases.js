@@ -1,7 +1,7 @@
 import * as T from './vendor/three.module.js';
 import {loadBlenderModel} from './models.js?v=100';
 import {baseSite} from './planet-base-layout.js?v=100';
-import {surfaceHeight} from './surface.js?v=131';
+import {surfaceHeight} from './surface.js?v=142';
 function dispose(root){root.traverse(o=>{o.geometry?.dispose();o.material?.dispose()});root.removeFromParent()}
 export class PlanetBases{
  constructor(scene,session){this.scene=scene;this.session=session;this.target=null;this.generation=0}

@@ -2,8 +2,8 @@ import * as T from './vendor/three.module.js';
 import {loadBlenderModel} from './models.js?v=100';
 import {focusedMineral} from './hud-policy.js';
 export function heldResourcePose(camera){return {position:new T.Vector3(.42,-.34,-.9).applyQuaternion(camera.quaternion).add(camera.position),quaternion:camera.quaternion.clone().multiply(new T.Quaternion().setFromEuler(new T.Euler(.06,.3,-.1)))}}
-import {V} from './flight.js?v=131';
-import {TRADER,ground,REACH} from './economy.js?v=131';
+import {V} from './flight.js?v=142';
+import {TRADER,ground,REACH} from './economy.js?v=142';
 export function nearbyMineral(nodes,eye,preferred){const nearby=nodes.filter(n=>n.hp>0&&eye.distanceTo(n.pos)<=REACH);return (nearby.find(n=>n.id===preferred)||nearby.sort((a,b)=>eye.distanceTo(a.pos)-eye.distanceTo(b.pos))[0])?.id}
 export function pickaxePose(swing){return {position:V(.4-swing*.16,-.4-swing*.08,-.9-swing*.1),quaternion:new T.Quaternion().setFromEuler(new T.Euler(.2-swing*1.35,0,-.25+swing*.65))}}
 export class Prospecting{

@@ -2,7 +2,7 @@ import * as T from './vendor/three.module.js';
 import {TOWER_PARTS} from './launch-tower.js?v=104';
 import {blockBounds} from './door-rules.js';
 import {CRAFT_LAYOUT,TRADE_LAYOUT,isSolidBlock,padHeightAt} from './surface-layout.js';
-import {surfaceHeight} from './surface.js?v=131';
+import {surfaceHeight} from './surface.js?v=142';
 const CELL=8,EPS=.002;
 const box=(x,y,z,hx,hy,hz,kind)=>({min:{x:x-hx,y:y-hy,z:z-hz},max:{x:x+hx,y:y+hy,z:z+hz},kind});
 export function sweepBox(start,end,half,b){let near=0,far=1,axis=null,sign=0;for(const k of ['x','y','z']){const lo=b.min[k]-half[k],hi=b.max[k]+half[k],d=end[k]-start[k];if(Math.abs(d)<1e-10){if(start[k]<=lo||start[k]>=hi)return null;continue}let a=(lo-start[k])/d,c=(hi-start[k])/d,n=-Math.sign(d);if(a>c)[a,c]=[c,a];if(a>=near&&a>=0){near=a;axis=k;sign=n}far=Math.min(far,c);if(near>far)return null}if(!axis||near<0||near>1)return null;const normal=new T.Vector3();normal[axis]=sign;return {t:near,normal,box:b}}

@@ -1,4 +1,4 @@
-import {cloudProfile} from './atmosphere-effects.js?v=119';
+import {cloudProfile} from './atmosphere-effects.js?v=142';
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
 const base={cloud:0,rain:0,snow:0,fog:0,wind:0};
 export const weatherPresets=Object.fromEntries(Object.entries({Clear:{},Cloudy:{cloud:.8,fog:.12},Rain:{cloud:1,rain:1,fog:.4,wind:.25},Fog:{cloud:.5,fog:1},Thunderstorm:{cloud:1,rain:1.4,fog:.6,wind:.8},Drizzle:{cloud:.75,rain:.3,fog:.25,wind:.1},'Heavy Rain':{cloud:1,rain:1.5,fog:.65,wind:.55},Windy:{cloud:.4,fog:.08,wind:1}}).map(([name,p])=>[name,{...base,...p}]));

@@ -1,4 +1,4 @@
-import {surfaceHeight} from './surface.js?v=131';
+import {surfaceHeight} from './surface.js?v=142';
 const STEP=6;
 function half(poly,fn){const out=[];for(let i=0;i<poly.length;i++){const a=poly[i],b=poly[(i+1)%poly.length],da=fn(a),db=fn(b);if(da>=-1e-8)out.push(a);if(da*db<0){const t=da/(da-db);out.push({x:a.x+(b.x-a.x)*t,z:a.z+(b.z-a.z)*t})}}return out}
 export function terrainMeshHeight(x,z){const x0=Math.floor(x/STEP)*STEP,z0=Math.floor(z/STEP)*STEP,u=(x-x0)/STEP,v=(z-z0)/STEP,a=surfaceHeight(x0,z0),b=surfaceHeight(x0+STEP,z0),c=surfaceHeight(x0,z0+STEP),d=surfaceHeight(x0+STEP,z0+STEP);return u+v<=1?a+(b-a)*u+(c-a)*v:d+(c-d)*(1-u)+(b-d)*(1-v)}

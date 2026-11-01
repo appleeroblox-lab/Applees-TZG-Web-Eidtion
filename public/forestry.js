@@ -1,5 +1,5 @@
 import * as T from './vendor/three.module.js';
-import {TREE_REACH} from './tree-data.js?v=131';
+import {TREE_REACH} from './tree-data.js?v=142';
 export class Forestry{
  constructor(economy,surface,crew,stream){Object.assign(this,{economy,surface,crew,stream});this.ray=new T.Raycaster();this.label=document.createElement('button');this.label.className='mineralBillboard treeBillboard';this.label.setAttribute('aria-label','Cut tree');this.label.innerHTML='<b>Tree</b><span class="nodeBar"><i></i></span><small></small>';this.label.hidden=true;document.body.append(this.label);this.label.onclick=e=>{e.stopPropagation();this.onCut?.(this.focus)};this.focus=null}
  pick(camera,x=0,y=0){if(!this.crew.onFoot||!this.surface.active)return;this.ray.setFromCamera(new T.Vector2(x,y),camera);const eye=this.crew.eye(),point=new T.Vector3();let best=Infinity,id;for(const p of this.stream.trees){const n=this.economy.tree(p.id,this.surface.body);if(!n?.hp||eye.distanceTo(n.pos)>TREE_REACH)continue;const box=new T.Box3(new T.Vector3(p.x-2,p.y,p.z-2),new T.Vector3(p.x+2,p.y+8,p.z+2));const hit=this.ray.ray.intersectBox(box,point);if(hit){const distance=hit.distanceTo(this.ray.ray.origin);if(distance<best){best=distance;id=p.id}}}return id}
