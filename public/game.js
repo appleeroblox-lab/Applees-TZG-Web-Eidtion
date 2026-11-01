@@ -1,5 +1,5 @@
 import {starVisualRadius} from './star-size.js?v=140';
-import {ShipCameraModes,SHIP_CAMERA_MODES,SHIP_CAMERA_NAMES} from './ship-camera-modes.js?v=142';
+import {ShipCameraModes,SHIP_CAMERA_MODES,SHIP_CAMERA_NAMES} from './ship-camera-modes.js?v=143';
 import {installSettingsAppearance} from './settings-appearance.js?v=140';
 import {WarpTunnel,warpWhiteFade} from './warp-effects.js?v=132';
 import {SurfaceMinimap} from './minimap.js?v=142';
@@ -301,7 +301,7 @@ function applyShipCamera(dt){
  if(crew.onFoot||explorer.enabled||flight.nav?.kind==='warp'){shipCameras.valid=false;return}
  shipCameraSubject(shipRig,cameraSubject);
  if(cockpit&&surface.active&&surface.onGround)shipCameras.blend=0;
- shipCameras.apply(camera,{dt,subject:cameraSubject,origin:surface.active?V():flight.pos,velocity:surface.active?surface.vel:flight.vel,forward:V(0,0,-1).applyQuaternion(flight.q),context:surface.active?surface.body:flight.system,clear:shipCameras.mode==='flyby'?clearCamera:null});if(shipCameras.mode==='orbit'){camera.up.copy(cameraUp);camera.lookAt(cameraSubject)}
+ shipCameras.apply(camera,{dt,shipRadius:Math.max(shipRig.collision?.halfWing||4,Math.abs(shipRig.collision?.nose||0),Math.abs(shipRig.collision?.tail||0)),subject:cameraSubject,origin:surface.active?V():flight.pos,velocity:surface.active?surface.vel:flight.vel,forward:V(0,0,-1).applyQuaternion(flight.q),context:surface.active?surface.body:flight.system,clear:shipCameras.mode==='flyby'?clearCamera:null});if(shipCameras.mode==='orbit'){camera.up.copy(cameraUp);camera.lookAt(cameraSubject)}
 }
 
 function zoomOrbit(delta){orbitDistance=clamp(orbitDistance*Math.exp(delta*.0018),ORBIT_MIN,ORBIT_MAX)}
