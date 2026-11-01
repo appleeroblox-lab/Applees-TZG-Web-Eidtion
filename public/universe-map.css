@@ -29,3 +29,7 @@ body.referenceHUD #mapDialog #selection{grid-template-columns:minmax(80px,1fr) a
 #mapDialog .mapSelectedActions{overflow:visible!important;flex-wrap:wrap}
 #mapDialog .atlas{background:#020711 url('./textures/stars_milky_way.jpg') center/cover no-repeat!important}
 @media(max-width:600px){body.referenceHUD #mapDialog #selection{grid-template-columns:minmax(0,1fr)!important}.mapSelectedActions{grid-column:1!important}}
+body.referenceHUD #mapDialog.mapSearching #catalog{display:block!important;z-index:20!important}
+body.referenceHUD #mapDialog:not(.mapSearching) #catalog{display:none!important}
+#mapDialog #catalog .orb,#mapDialog #catalog small{display:none!important}
+.atlasSystemFade{display:grid;place-items:center;color:#e4f7ff;font-size:clamp(17px,3vw,26px);text-align:center;padding:24px}

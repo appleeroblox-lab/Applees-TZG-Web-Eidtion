@@ -49,7 +49,7 @@
     "test:minimap": "node tests/minimap-terrain-update.mjs && node --experimental-vm-modules tests/ui-smoke.mjs --minimap-only && node --experimental-vm-modules tests/ui-smoke.mjs --desktop-only --minimap-only && node --experimental-vm-modules tests/ui-smoke.mjs --minimap-navigation-only && node --experimental-vm-modules tests/ui-smoke.mjs --desktop-only --minimap-navigation-only",
     "test:maintenance:sql": "node tests/account-maintenance-postgres.mjs && node tests/debug-maintenance-ui.mjs",
     "test:cameras": "node tests/ship-camera-modes.mjs && node --experimental-vm-modules tests/ui-smoke.mjs --new-camera-modes-only && node --experimental-vm-modules tests/ui-smoke.mjs --desktop-only --new-camera-modes-only",
-    "test:universe-map": "node --experimental-vm-modules tests/universe-map-3d.mjs && node tests/menu-sizing.mjs"
+    "test:universe-map": "node --experimental-vm-modules tests/universe-map-3d.mjs && node tests/menu-sizing.mjs && node --experimental-vm-modules tests/ui-smoke.mjs --map-search-only"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

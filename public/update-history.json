@@ -1,8 +1,21 @@
 {
-  "currentVersion": "v0.0.145",
+  "currentVersion": "v0.0.146",
   "legacyMapping": "Legacy source N is displayed as v0.0.N.",
   "historyNote": "The earliest separately documented release is v0.0.3. Original creation notes and separate entries for v0.0.1–v0.0.2, v0.0.9–v0.0.13 and v0.0.18–v0.0.22 are not recoverable from this repository. The first Git import on 25 October 2026 already contained earlier development. Historical features may be replaced by later updates.",
   "entries": [
+    {
+      "legacyVersion": 146,
+      "version": "v0.0.146",
+      "date": "2026-11-01",
+      "title": "UI transparency, map search and menu fixes",
+      "changes": [
+        "Preserved transparent surfaces while applying main interface colors to painted panels and top bars.",
+        "Restored body-name search results, removed the All systems selector option and added system-changing text to the black fade.",
+        "Restored labeled Help in More and matched main action button sizes to the account button.",
+        "Restored the sign-in screen loading background and rocket pattern."
+      ],
+      "source": "GitHub repository update"
+    },
     {
       "legacyVersion": 145,
       "version": "v0.0.145",
