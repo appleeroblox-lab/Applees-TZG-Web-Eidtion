@@ -1,5 +1,5 @@
 {
-  "version": 143,
+  "version": 144,
   "files": [
     "account-gate.js",
     "account-pages.js",
@@ -469,7 +469,9 @@
     "settings-appearance.js",
     "settings-appearance.css",
     "ship-camera-modes.js",
-    "star-size.js"
+    "star-size.js",
+    "atlas-renderer.js",
+    "universe-map.css"
   ],
   "versionedFiles": [
     "account-gate.js",
@@ -678,11 +680,13 @@
     "settings-appearance.css",
     "ship-camera-modes.js",
     "star-size.js",
-    "camera-horizon.js"
+    "camera-horizon.js",
+    "atlas-renderer.js",
+    "universe-map.css"
   ],
   "fileVersions": {
     "account-pages.js": 103,
-    "atlas-3d.js": 107,
+    "atlas-3d.js": 144,
     "atlas-sky.js": 91,
     "auth-first.js": 112,
     "avatar-crop.js": 103,
@@ -703,7 +707,7 @@
     "debug-message-logs.js": 96,
     "debug-moderation.js": 119,
     "debug-verified.js": 103,
-    "device-settings.js": 139,
+    "device-settings.js": 144,
     "earth-biomes.js": 122,
     "earth-environment.js": 142,
     "economy.js": 142,
@@ -713,7 +717,7 @@
     "flight.js": 142,
     "forestry.js": 142,
     "friends-ui.js": 103,
-    "game.js": 143,
+    "game.js": 144,
     "gif-gallery.js": 96,
     "ground-weather.js": 142,
     "identity-ui.js": 91,
@@ -765,7 +769,7 @@
     "world-precipitation.js": 142,
     "models/crafting-center-v96.json": 97,
     "account-gate.js": 107,
-    "boot-loader.js": 143,
+    "boot-loader.js": 144,
     "polish-v96.css": 100,
     "roblox-assets.js": 97,
     "models/base-venus.json": 100,
@@ -829,7 +833,7 @@
     "vendor/html2canvas.min.js": 102,
     "update-logs.js": 138,
     "legacy-ui.js": 102,
-    "update-history.json": 143,
+    "update-history.json": 144,
     "update-logs.css": 103,
     "mobile-notifications.js": 103,
     "free-camera.js": 105,
@@ -849,7 +853,7 @@
     "player-activity.js": 107,
     "player-journey.js": 142,
     "journey.css": 108,
-    "menu-sizes.js": 119,
+    "menu-sizes.js": 144,
     "responsive-ui.css": 109,
     "black-hole-effects.js": 110,
     "speed-control.js": 142,
@@ -868,7 +872,7 @@
     "surface-palette.js": 119,
     "minimap.js": 142,
     "minimap.css": 127,
-    "index.html": 143,
+    "index.html": 144,
     "warp-effects.js": 132,
     "reentry-plume.js": 133,
     "textures/star-shine.png": 128,
@@ -878,6 +882,8 @@
     "settings-appearance.css": 140,
     "ship-camera-modes.js": 143,
     "star-size.js": 140,
-    "camera-horizon.js": 140
+    "camera-horizon.js": 140,
+    "atlas-renderer.js": 144,
+    "universe-map.css": 144
   }
 }

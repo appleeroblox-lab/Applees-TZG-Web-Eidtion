@@ -1,8 +1,21 @@
 {
-  "currentVersion": "v0.0.143",
+  "currentVersion": "v0.0.144",
   "legacyMapping": "Legacy source N is displayed as v0.0.N.",
   "historyNote": "The earliest separately documented release is v0.0.3. Original creation notes and separate entries for v0.0.1–v0.0.2, v0.0.9–v0.0.13 and v0.0.18–v0.0.22 are not recoverable from this repository. The first Git import on 25 October 2026 already contained earlier development. Historical features may be replaced by later updates.",
   "entries": [
+    {
+      "legacyVersion": 144,
+      "version": "v0.0.144",
+      "date": "2026-11-01",
+      "title": "Full-screen 3D Universe Map",
+      "changes": [
+        "Reworked the Universe Map into a full-screen textured 3D view with rings, atmospheres, orbital paths, readable labels and a compass.",
+        "Added direct 3D body selection, smooth focus and camera movement, Orbits/Labels toggles and black fades when changing systems.",
+        "Removed Universe Map Size; retained search, system selection, destination locking and route planning.",
+        "Added model LOD, bounded texture uploads, closed-map render suspension and resource cleanup."
+      ],
+      "source": "GitHub repository update"
+    },
     {
       "legacyVersion": 143,
       "version": "v0.0.143",
